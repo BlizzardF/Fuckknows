@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Fuckknows"
+run/main_scene="uid://cdgwvbhm4gheu"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [editor]

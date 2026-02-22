@@ -3,7 +3,10 @@
 [node name="Node2D" type="Node2D" unique_id=580429591]
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1994792920]
-position = Vector2(58, 30)
+position = Vector2(132, -16)
 color = Color(0.9411026, 1, 0.64243627, 1)
 polygon = PackedVector2Array(0, 239.99998, 535.99994, 240, 535.99994, 40, 0, 40)
-uv = PackedVector2Array(0, 239.99998, 535.99994, 240, 535.99994, 40, 0, 40)
+uv = PackedVector2Array(-32.000046, 256, 503.9999, 256, 503.9999, 56.000008, -32.000046, 56.000008)
+polygons = [PackedInt32Array(3, 1, 2), PackedInt32Array(0, 3, 1)]
+
+[node name="Node" type="Node" parent="." unique_id=727947908]
