@@ -1,3 +1,38 @@
-[gd_resource type="Animation" format=3 uid="uid://1811ms7mqe6k"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://1811ms7mqe6k"]
+
+[ext_resource type="Texture2D" uid="uid://cby4jjxi82fdb" path="res://Assests/Player/Player_0001.png" id="1_ynb2i"]
+[ext_resource type="Texture2D" uid="uid://contj2vmtir15" path="res://Assests/Player/Player_0002.png" id="2_onfa5"]
+[ext_resource type="Texture2D" uid="uid://c32py8v8tu113" path="res://Assests/Player/Player_0003.png" id="3_cnq1j"]
+[ext_resource type="Texture2D" uid="uid://cg1baqaqwitqh" path="res://Assests/Player/Player_0004.png" id="4_buc10"]
+[ext_resource type="Texture2D" uid="uid://d4jpsox40um44" path="res://Assests/Player/Player_0005.png" id="5_54ys7"]
+[ext_resource type="Texture2D" uid="uid://bp1htks81xr6q" path="res://Assests/Player/Player_0006.png" id="6_itxwl"]
+[ext_resource type="Texture2D" uid="uid://bq3vkqdq7vtu4" path="res://Assests/Player/Player_0007.png" id="7_qqvh3"]
 
 [resource]
+animations = [{
+"frames": [{
+"duration": 6.4,
+"texture": ExtResource("1_ynb2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_onfa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cnq1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_buc10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_54ys7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_itxwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qqvh3")
+}],
+"loop": true,
+"name": &"Blink",
+"speed": 5.0
+}]

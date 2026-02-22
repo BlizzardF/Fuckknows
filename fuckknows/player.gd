@@ -23,9 +23,7 @@ func _process(delta):
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$AnimatedSprite2D.play("Blink")
-	else :
-		$AnimatedSprite2D.stop()
+swas
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size) 

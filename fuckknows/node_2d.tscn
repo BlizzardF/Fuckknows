@@ -1,58 +1,25 @@
 [gd_scene format=3 uid="uid://cs7ia8n2f6dry"]
 
-[ext_resource type="Texture2D" uid="uid://cby4jjxi82fdb" path="res://Assests/Player/Player_0001.png" id="1_d21ai"]
 [ext_resource type="Script" uid="uid://838pukii0sw0" path="res://player.gd" id="1_rj586"]
-[ext_resource type="Texture2D" uid="uid://contj2vmtir15" path="res://Assests/Player/Player_0002.png" id="2_rj586"]
-[ext_resource type="Texture2D" uid="uid://c32py8v8tu113" path="res://Assests/Player/Player_0003.png" id="3_4d7sh"]
-[ext_resource type="Texture2D" uid="uid://cg1baqaqwitqh" path="res://Assests/Player/Player_0004.png" id="4_ir8iy"]
-[ext_resource type="Texture2D" uid="uid://d4jpsox40um44" path="res://Assests/Player/Player_0005.png" id="5_hqns4"]
-[ext_resource type="Texture2D" uid="uid://bp1htks81xr6q" path="res://Assests/Player/Player_0006.png" id="6_x0ka3"]
-[ext_resource type="Texture2D" uid="uid://bq3vkqdq7vtu4" path="res://Assests/Player/Player_0007.png" id="7_0h7mo"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nr8wp"]
-animations = [{
-"frames": [{
-"duration": 6.4,
-"texture": ExtResource("1_d21ai")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_rj586")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_4d7sh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ir8iy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_hqns4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_x0ka3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_0h7mo")
-}],
-"loop": true,
-"name": &"Blink",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://1811ms7mqe6k" path="res://Assests/Player/Blink.tres" id="2_0e48y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d21ai"]
 radius = 11.5
 height = 28.0
 
 [node name="Player" type="Area2D" unique_id=1031489457]
-position = Vector2(564, 301)
+position = Vector2(74, 57)
 script = ExtResource("1_rj586")
+speed = null
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1169095751]
-sprite_frames = SubResource("SpriteFrames_nr8wp")
+sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.70083463
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=797724481]
 rotation = 1.5707964
 scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_d21ai")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1883013167]
