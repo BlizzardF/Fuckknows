@@ -50,7 +50,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1169095751]
 sprite_frames = SubResource("SpriteFrames_nr8wp")
 animation = &"Blink"
-frame_progress = 0.70083463
+frame_progress = 0.04636544
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=797724481]
 rotation = 1.5707964

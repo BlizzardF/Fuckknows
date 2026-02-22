@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cdgwvbhm4gheu"]
 
+[ext_resource type="Script" uid="uid://bj4fs20pyg8w4" path="res://start_screen.gd" id="1_fhtl0"]
+
 [node name="Node2D" type="Node2D" unique_id=580429591]
+script = ExtResource("1_fhtl0")
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1994792920]
 position = Vector2(132, -16)
