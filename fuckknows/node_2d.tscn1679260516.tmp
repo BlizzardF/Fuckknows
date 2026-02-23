@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cs7ia8n2f6dry"]
+
+[ext_resource type="Script" uid="uid://838pukii0sw0" path="res://player.gd" id="1_rj586"]
+[ext_resource type="SpriteFrames" uid="uid://1811ms7mqe6k" path="res://Assests/Player/Blink.tres" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://cby4jjxi82fdb" path="res://Assests/Player/Player_0001.png" id="2_0hol4"]
+[ext_resource type="Shader" uid="uid://vwyebsgi7aby" path="res://node_2d.gdshader" id="2_epypp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0hol4"]
+shader = ExtResource("2_epypp")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d21ai"]
+radius = 11.5
+height = 28.0
+
+[node name="Player" type="Area2D" unique_id=1031489457]
+script = ExtResource("1_rj586")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=911365533]
+texture = ExtResource("2_0hol4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1169095751]
+material = SubResource("ShaderMaterial_0hol4")
+sprite_frames = ExtResource("2_0e48y")
+animation = &"Blink"
+frame_progress = 0.90569705
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=797724481]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_d21ai")

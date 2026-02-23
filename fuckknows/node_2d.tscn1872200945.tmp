@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cs7ia8n2f6dry"]
 
+[ext_resource type="Script" uid="uid://838pukii0sw0" path="res://player.gd" id="1_rj586"]
 [ext_resource type="SpriteFrames" uid="uid://1811ms7mqe6k" path="res://Assests/Player/Blink.tres" id="2_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cby4jjxi82fdb" path="res://Assests/Player/Player_0001.png" id="2_0hol4"]
 [ext_resource type="Shader" uid="uid://vwyebsgi7aby" path="res://node_2d.gdshader" id="2_epypp"]
@@ -14,10 +15,10 @@ shader = ExtResource("2_epypp")
 
 [node name="Player" type="Area2D" unique_id=1031489457]
 position = Vector2(175, 153)
+script = ExtResource("1_rj586")
 metadata/_edit_group_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=553058549]
-motion_mode = 1
 script = ExtResource("2_q6r6c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=797724481]
@@ -32,4 +33,4 @@ texture = ExtResource("2_0hol4")
 material = SubResource("ShaderMaterial_0hol4")
 sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.78585905
+frame_progress = 0.73377305
