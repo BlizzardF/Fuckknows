@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed = 100
+@export var speed = 3
 var screen_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,7 +23,6 @@ func _process(delta):
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-swas
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size) 
