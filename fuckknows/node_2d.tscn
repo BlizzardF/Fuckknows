@@ -34,4 +34,4 @@ script = ExtResource("3_q6r6c")
 material = SubResource("ShaderMaterial_0hol4")
 sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.33309296
+frame_progress = 0.42857006
