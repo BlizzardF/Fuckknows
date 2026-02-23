@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @export var speed = 600
-@export var speed_mult = 90
+@export var speed_mult = 1
 var screen_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
