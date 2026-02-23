@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b4vheugtrqdj4" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cvhvk1gxmsvt4" path="res://Scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dvg5nccfx237b" path="res://Enemy.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://bws0lp7l0psnv" path="res://start_positon.gd" id="4_1bvp3"]
 
 [sub_resource type="Curve2D" id="Curve2D_ig7tw"]
 _data = {
@@ -29,8 +30,9 @@ visible = false
 [node name="MobTimer" type="Timer" parent="." unique_id=1995058976]
 wait_time = 0.058
 
-[node name="Start_Positon" type="Marker2D" parent="." unique_id=335699984]
-position = Vector2(460, 126)
+[node name="Start Positon" type="Marker2D" parent="." unique_id=335699984]
+position = Vector2(240, 240)
+script = ExtResource("4_1bvp3")
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="Start Timer" to="." method="_on_start_timer_timeout"]
