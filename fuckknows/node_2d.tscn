@@ -32,4 +32,4 @@ texture = ExtResource("2_0hol4")
 material = SubResource("ShaderMaterial_0hol4")
 sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.48250052
+frame_progress = 0.19445802
