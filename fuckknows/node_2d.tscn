@@ -20,6 +20,7 @@ metadata/_edit_group_ = true
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=553058549]
 motion_mode = 1
 script = ExtResource("2_q6r6c")
+speed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=797724481]
 rotation = 1.5707964
@@ -34,4 +35,4 @@ script = ExtResource("3_q6r6c")
 material = SubResource("ShaderMaterial_0hol4")
 sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.42857006
+frame_progress = 0.4520299
