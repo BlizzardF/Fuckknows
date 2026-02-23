@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.6", "Mobile")
 
 buses/default_bus_layout="uid://busqlfov531o3"
 
+[display]
+
+window/size/mode=2
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

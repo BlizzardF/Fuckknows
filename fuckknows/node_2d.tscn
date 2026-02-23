@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cby4jjxi82fdb" path="res://Assests/Player/Player_0001.png" id="2_0hol4"]
 [ext_resource type="Shader" uid="uid://vwyebsgi7aby" path="res://node_2d.gdshader" id="2_epypp"]
 [ext_resource type="Script" uid="uid://dtude8jjdptiv" path="res://character_body_2d.gd" id="2_q6r6c"]
+[ext_resource type="Script" uid="uid://cw81gatv7le3q" path="res://sprite_2d.gd" id="3_q6r6c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d21ai"]
 radius = 11.5
@@ -27,9 +28,10 @@ shape = SubResource("CapsuleShape2D_d21ai")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=911365533]
 texture = ExtResource("2_0hol4")
+script = ExtResource("3_q6r6c")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1169095751]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/Sprite2D" unique_id=1169095751]
 material = SubResource("ShaderMaterial_0hol4")
 sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.19445802
+frame_progress = 0.33309296
