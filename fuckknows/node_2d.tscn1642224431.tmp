@@ -23,7 +23,7 @@ texture = ExtResource("2_0hol4")
 material = SubResource("ShaderMaterial_0hol4")
 sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.1773666
+frame_progress = 0.4896047
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=797724481]
 rotation = 1.5707964
