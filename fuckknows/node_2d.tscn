@@ -3,8 +3,8 @@
 [ext_resource type="SpriteFrames" uid="uid://1811ms7mqe6k" path="res://Assests/Player/Blink.tres" id="2_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cby4jjxi82fdb" path="res://Assests/Player/Player_0001.png" id="2_0hol4"]
 [ext_resource type="Shader" uid="uid://vwyebsgi7aby" path="res://node_2d.gdshader" id="2_epypp"]
+[ext_resource type="Script" uid="uid://c0cgjgg3lyqwo" path="res://area_2d.gd" id="2_kdubu"]
 [ext_resource type="Script" uid="uid://dtude8jjdptiv" path="res://character_body_2d.gd" id="2_q6r6c"]
-[ext_resource type="Script" uid="uid://cw81gatv7le3q" path="res://sprite_2d.gd" id="3_q6r6c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d21ai"]
 radius = 11.5
@@ -13,26 +13,30 @@ height = 28.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0hol4"]
 shader = ExtResource("2_epypp")
 
-[node name="Player" type="Area2D" unique_id=1031489457]
-position = Vector2(175, 153)
-metadata/_edit_group_ = true
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=553058549]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=959544683]
 motion_mode = 1
 script = ExtResource("2_q6r6c")
-speed = 300
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=797724481]
+[node name="Player Collider" type="CollisionShape2D" parent="." unique_id=1194803143]
 rotation = 1.5707964
 scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_d21ai")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=911365533]
-texture = ExtResource("2_0hol4")
-script = ExtResource("3_q6r6c")
+[node name="Area2D" type="Area2D" parent="." unique_id=1228297762]
+script = ExtResource("2_kdubu")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/Sprite2D" unique_id=1169095751]
+[node name="Player Collider" type="CollisionShape2D" parent="Area2D" unique_id=1590053446]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_d21ai")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1184455459]
+texture = ExtResource("2_0hol4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D" unique_id=1863101042]
 material = SubResource("ShaderMaterial_0hol4")
 sprite_frames = ExtResource("2_0e48y")
 animation = &"Blink"
-frame_progress = 0.4520299
+frame_progress = 0.35161304
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

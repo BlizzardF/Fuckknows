@@ -20,7 +20,8 @@ buses/default_bus_layout="uid://busqlfov531o3"
 
 [display]
 
-window/size/mode=2
+window/size/viewport_width=1200
+window/size/viewport_height=720
 
 [editor]
 

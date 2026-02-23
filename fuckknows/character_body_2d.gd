@@ -1,6 +1,6 @@
 extends CharacterBody2D
-signal hit
-@export var speed = 200
+@export var speed = 600
+@export var speed_mult = 90
 var screen_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,21 +16,14 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-		
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed * speed_mult
+
 	if velocity == Vector2.ZERO:
 		$Sprite2D/AnimatedSprite2D.play("Blink")
 	else:
 		$Sprite2D/AnimatedSprite2D.stop()
 		
-		
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-	
-		
-
-	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
-
 func _physics_process(delta):
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
