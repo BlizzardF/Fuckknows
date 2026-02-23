@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cvhvk1gxmsvt4"]
 
 [ext_resource type="PackedScene" uid="uid://cs7ia8n2f6dry" path="res://node_2d.tscn" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://cishm55bfffgn" path="res://Scenes/player.gd" id="2_cvnsp"]
 
 [node name="Player" unique_id=1031489457 instance=ExtResource("1_4flbx")]
-speed = 3
+script = ExtResource("2_cvnsp")
 
-[node name="AnimatedSprite2D" parent="." index="0" unique_id=1169095751]
-frame_progress = 0.0
+[connection signal="hit" from="CharacterBody2D/Area2D" to="." method="_on_area_2d_hit"]
